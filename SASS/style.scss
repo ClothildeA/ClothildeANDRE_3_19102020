@@ -1,0 +1,101 @@
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$color-background: #F2F2F2;
+
+@mixin box-shadow{
+    box-shadow: 0px 5px 10px 2px rgb(196, 196, 196);
+}
+
+
+body {
+    font-family: 'Roboto';
+    font-size: 100%;
+    font-weight: 400;
+    font-style: normal;
+    color: #000000;
+    margin: 0;
+}
+
+h1, h2, h3, h4, {
+    font-weight: 700;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+
+/*Header*/
+
+.header__logo {
+    width: 45%;
+    display: flex;
+    margin: 17px auto;
+}
+
+/*home*/
+
+.home__search {
+    display: flex;
+    justify-content: center;
+    background-color: darken($color: $color-background, $amount: 5%);
+    padding: 15px;
+    box-shadow: inset;
+    -webkit-box-shadow: inset 0px 20px 5px -20px rgba(158,158,158,1);
+    &-input {
+        border: none;
+        background-color: darken($color: $color-background, $amount: 5%);
+        text-align: center;
+        font-size: 1rem;
+    }
+    &-input:focus {
+        outline: none;
+    }
+}
+
+.home__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 0;
+    background-color: $color-background;
+    &-title {
+        margin: 15px 0;
+        font-size: 1.5rem;
+        padding: 0 50px;
+    }
+    &-content {
+        margin: 0 20px;
+        font-size: 1rem;
+    }
+    &-button {
+        border-radius: 25px;
+        background: linear-gradient($color-secondary, $color-primary);
+        padding: 15px 20px;
+        margin: 35px;
+        border: none;
+        @include box-shadow;
+        &-link {
+            color: #fff;
+            font-size: 1rem;
+        }
+    }
+}
+
+.home__operation{
+    &-item {
+        display: flex;
+        background-color: lighten($color: $color-background, $amount: 1%);
+        margin: 20px;
+        padding: 10px;
+        border-radius: 25px;
+        @include box-shadow;
+    }
+}
