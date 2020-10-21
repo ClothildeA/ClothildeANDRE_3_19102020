@@ -155,7 +155,10 @@ a {
 
 }
 
-.restau{
+/*Restau*/
+
+.restau {
+    margin-bottom: 65px;
     &__title {
         display: flex;
         flex-basis: 100%;
@@ -212,5 +215,41 @@ a {
     }
     .img__delice {
         background-image: url(images/restaurants/le-delice-des-sens.jpg);
+    }
+}
+
+/*Footer*/
+
+.footer {
+    padding: 20px;
+    background-color: #353535;
+    &__logo {
+        width: 30%;
+        margin: 5px;
+    }
+    &__menu {
+        margin: 5px;
+        padding: 0;
+        &--link {
+            padding-bottom: 9px;
+            &-icon {
+                margin-right: 5px;
+                font-size: .8rem;
+            }
+        }
+    }
+}
+
+
+/*Pages*/
+
+.header__page{
+    display: flex;
+    align-items: center;
+    .header__icon--return {
+        margin: 20px;
+    }
+    .header__logo--page {
+        margin: 17px 50px;
     }
 }

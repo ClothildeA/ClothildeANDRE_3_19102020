@@ -106,54 +106,77 @@ a {
   .home__operation-item--primary {
     background-color: #f2eafb; }
 
-.restau__title {
-  display: flex;
-  flex-basis: 100%; }
-
-.restau__item {
-  box-shadow: 0px 5px 10px 2px #e2e2e2;
-  display: flex;
-  border-radius: 15px;
-  margin: 20px;
-  flex-basis: 100%; }
-  .restau__item--link {
+/*Restau*/
+.restau {
+  margin-bottom: 65px; }
+  .restau__title {
     display: flex;
-    flex-direction: column;
     flex-basis: 100%; }
-  .restau__item--background-image {
-    border-radius: 15px 15px 0 0;
-    height: 175px;
-    background-position: center;
-    background-size: cover; }
-    .restau__item--background-image-new {
-      width: fit-content;
-      margin: 10px;
-      padding: 5px 10px;
-      background-color: #99E2D0;
-      color: #278870;
-      font-size: .9rem;
-      border-radius: 2px;
-      display: flex;
-      margin-left: auto; }
-  .restau__item--content {
+  .restau__item {
+    box-shadow: 0px 5px 10px 2px #e2e2e2;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-basis: 100%;
-    padding: 10px;
-    height: fit-content; }
-  .restau__item--icon {
-    font-size: 1.5rem;
-    margin: 10px; }
+    border-radius: 15px;
+    margin: 20px;
+    flex-basis: 100%; }
+    .restau__item--link {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 100%; }
+    .restau__item--background-image {
+      border-radius: 15px 15px 0 0;
+      height: 175px;
+      background-position: center;
+      background-size: cover; }
+      .restau__item--background-image-new {
+        width: fit-content;
+        margin: 10px;
+        padding: 5px 10px;
+        background-color: #99E2D0;
+        color: #278870;
+        font-size: .9rem;
+        border-radius: 2px;
+        display: flex;
+        margin-left: auto; }
+    .restau__item--content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-basis: 100%;
+      padding: 10px;
+      height: fit-content; }
+    .restau__item--icon {
+      font-size: 1.5rem;
+      margin: 10px; }
+  .restau .img__palette {
+    background-image: url(images/restaurants/la-palette-du-gout.jpg); }
+  .restau .img__note {
+    background-image: url(images/restaurants/la-note-enchantee.jpg); }
+  .restau .img__francaise {
+    background-image: url(images/restaurants/a-la-francaise.jpg); }
+  .restau .img__delice {
+    background-image: url(images/restaurants/le-delice-des-sens.jpg); }
 
-.restau .img__palette {
-  background-image: url(images/restaurants/la-palette-du-gout.jpg); }
+/*Footer*/
+.footer {
+  padding: 20px;
+  background-color: #353535; }
+  .footer__logo {
+    width: 30%;
+    margin: 5px; }
+  .footer__menu {
+    margin: 5px;
+    padding: 0; }
+    .footer__menu--link {
+      padding-bottom: 9px; }
+      .footer__menu--link-icon {
+        margin-right: 5px;
+        font-size: .8rem; }
 
-.restau .img__note {
-  background-image: url(images/restaurants/la-note-enchantee.jpg); }
-
-.restau .img__francaise {
-  background-image: url(images/restaurants/a-la-francaise.jpg); }
-
-.restau .img__delice {
-  background-image: url(images/restaurants/le-delice-des-sens.jpg); }
+/*Pages*/
+.header__page {
+  display: flex;
+  align-items: center; }
+  .header__page .header__icon--return {
+    margin: 20px; }
+  .header__page .header__logo--page {
+    margin: 17px 50px; }
