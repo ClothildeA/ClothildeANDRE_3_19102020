@@ -34,6 +34,10 @@ h2 {
     font-size: 1.5rem;
 }
 
+h3, p {
+    margin: 5px 0;
+}
+
 ul {
     list-style-type: none;
 }
@@ -149,4 +153,64 @@ a {
         background-color: lighten($color: $color-primary, $amount: 35%);
     }
 
+}
+
+.restau{
+    &__title {
+        display: flex;
+        flex-basis: 100%;
+    }
+    &__item {
+        @include item-shadow;
+        display: flex;
+        border-radius: 15px;
+        margin: 20px;
+        flex-basis: 100%;
+        &--link {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 100%;
+        }
+        &--background-image {
+            border-radius: 15px 15px 0 0;
+            height: 175px;
+            background-position: center;
+            background-size: cover;
+            &-new {
+                width: fit-content;
+                margin: 10px;
+                padding: 5px 10px;
+                background-color: $color-tertiary;
+                color: darken($color: $color-tertiary, $amount: 40%);
+                font-size: .9rem;
+                border-radius: 2px;
+                display: flex;
+                margin-left: auto;
+            }
+        }
+        &--content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-basis: 100%;
+            padding: 10px;
+            height: fit-content;
+        }
+        &--icon {
+            font-size: 1.5rem;
+            margin: 10px;
+        }
+    }
+    .img__palette {
+        background-image: url(images/restaurants/la-palette-du-gout.jpg);
+    }
+    .img__note {
+        background-image: url(images/restaurants/la-note-enchantee.jpg);
+    }
+    .img__francaise {
+        background-image: url(images/restaurants/a-la-francaise.jpg);
+    }
+    .img__delice {
+        background-image: url(images/restaurants/le-delice-des-sens.jpg);
+    }
 }
