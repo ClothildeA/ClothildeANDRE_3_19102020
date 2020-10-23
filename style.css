@@ -203,16 +203,16 @@ a {
   background-size: cover; }
 
 .restau__page .img__palette {
-  background-image: url(images/restaurants/la-palette-du-gout); }
+  background-image: url(images/restaurants/la-palette-du-gout.jpg); }
 
 .restau__page .img__note {
-  background-image: url(images/restaurants/la-note-enchantee); }
+  background-image: url(images/restaurants/la-note-enchantee.jpg); }
 
 .restau__page .img__francaise {
   background-image: url(images/restaurants/a-la-francaise.jpg); }
 
 .restau__page .img__delice {
-  background-image: url(images/restaurants/le-delice-des-sens); }
+  background-image: url(images/restaurants/le-delice-des-sens.jpg); }
 
 .restau__page--menu {
   background-color: #F2F2F2;
