@@ -2,6 +2,9 @@ $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $color-background: #F2F2F2;
+$color-black: #000000;
+$color-white: #FFFFFF;
+
 
 @mixin button-shadow{
     box-shadow: 0px 5px 10px 2px rgb(196, 196, 196);
@@ -27,6 +30,10 @@ body {
 
 h1, h2, h3, h4 {
     font-weight: 700;
+}
+
+h1, h5 {
+   font-family: 'Shrikhand'; 
 }
 
 h2 {
@@ -92,21 +99,25 @@ a {
         margin: 0 20px;
         font-size: 1rem;
     }
-    &-button {
-        border-radius: 25px;
-        @include button-background;
-        padding: 15px 20px;
-        margin: 35px;
-        border: none;
-        @include button-shadow;
-        &-link {
-            color: #fff;
-            font-size: 1rem;
-        }
-        &-button:hover {
-
-        }
+}
+.home__text-button, .restau__page--menu-button {
+    border-radius: 25px;
+    @include button-background;
+    padding: 15px 20px;
+    margin: 35px;
+    border: none;
+    @include button-shadow;
+    &-link {
+        color: $color-white;
+        font-size: 1rem;
     }
+    &-button:hover {
+
+    }
+}
+
+.restau__page--menu-button {
+    width: 50%;
 }
 
 .home__operation{
@@ -222,10 +233,13 @@ a {
 
 .footer {
     padding: 20px;
-    background-color: #353535;
+    background-color: lighten($color: $color-black, $amount: 20%);
     &__logo {
         width: 30%;
-        margin: 5px;
+        margin: 0 auto 15px 5px;
+        justify-content: center;
+        color: $color-white;
+        font-size: 1rem;
     }
     &__menu {
         margin: 5px;
@@ -235,13 +249,19 @@ a {
             &-icon {
                 margin-right: 5px;
                 font-size: .8rem;
+                color: $color-white;
             }
+            .footer__meu--link-content {
+                color: $color-white;
+            }         
         }
     }
 }
 
 
 /*Pages*/
+
+/*Header-page*/
 
 .header__page{
     display: flex;
@@ -250,6 +270,87 @@ a {
         margin: 20px;
     }
     .header__logo--page {
-        margin: 17px 50px;
+        margin: 10px 50px;
+        font-size: 1.8rem;
+    }
+}
+
+/*Restau-page*/
+
+.restau__page {
+    &--background-image {
+        height: 275px;
+        background-position: center;
+        background-size: cover;
+    }
+    .img__palette {
+        background-image: url(images/restaurants/la-palette-du-gout);
+    }
+    .img__note {
+        background-image: url(images/restaurants/la-note-enchantee);
+    }
+    .img__francaise {
+        background-image: url(images/restaurants/a-la-francaise.jpg);
+    }
+    .img__delice {
+        background-image: url(images/restaurants/le-delice-des-sens);
+    }
+    &--menu {
+        background-color: $color-background;
+        border-radius: 35px 35px 0 0;
+        margin-top: -50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: baseline;
+        padding-bottom: 45px;
+        &-title {
+            font-family: 'Shrikhand';
+            font-size: 1.6rem;
+            margin: 25px 0 0 -25px;
+        }
+        &-icon {
+            font-size: 1.6rem;
+        }
+    }
+}  
+.restau__page-food {
+    width: 93%;
+    .food-title {
+        font-weight: 100;
+        font-size: 1rem;
+        margin: 40px 10px 15px 5px;
+    }
+    .food-title::after {
+        content: "";
+        display: block;
+        border: solid 1.5px $color-tertiary;
+        background-color: $color-tertiary;
+        width: 11%;
+        margin: 5px 0;
+    }
+    .food-content {
+        background-color: white;
+        border-radius: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 15px 0;
+        padding: 10px;
+        @include item-shadow;
+        &__text--h {
+            width: 100%;
+            margin: 0;
+            padding: 3px;
+            font-size: 1.1rem;
+            }
+        &__text--p {
+            width: 85%;
+            margin: 0;
+            padding: 3px;
+            font-size: .9rem;
+        }
+        &__text--price {
+            margin: 0;
+        }
     }
 }
