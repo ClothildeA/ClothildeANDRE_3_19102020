@@ -354,6 +354,7 @@ a {
             flex-basis: 100%;
             display: flex;
             align-items: baseline;
+            justify-content: space-between;
 
             &-title {
                 font-family: 'Shrikhand';
@@ -453,20 +454,21 @@ a {
             width: 98%;
             display: flex;
             justify-content: space-around;
+            flex-wrap: wrap;
 
             &--wrapper {
                 display: flex;
-                width: 30%;
                 flex-direction: column;
             }
 
             .food-wrapper {
                 display: flex;
-                flex-direction: column;
+                justify-content: space-around;
 
                 .food-content {
                     min-height: 100px;
                     align-content: space-around;
+                    flex-basis: 30%;
 
                     &__text--p {
                         width: 100%;
@@ -484,4 +486,16 @@ a {
             width: 180px;
         }
     }
+}
+
+@media all and (min-width: 1025px) {
+
+    .food-wrapper {
+        flex-direction: column;
+    }
+
+    .restau__page-food--wrapper {
+        width: 30%;
+    }
+
 }
