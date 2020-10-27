@@ -417,7 +417,7 @@ a {
 }
 
 
-@media all and (min-width: 765px) {
+@media all and (min-width: 765px) /*Tablette*/ {
 
     /*Home*/
 
@@ -464,6 +464,7 @@ a {
             .food-wrapper {
                 display: flex;
                 justify-content: space-around;
+                flex-wrap: wrap;
 
                 .food-content {
                     min-height: 100px;
@@ -488,7 +489,7 @@ a {
     }
 }
 
-@media all and (min-width: 1025px) {
+@media all and (min-width: 1025px) /*Desktop*/ {
 
     .food-wrapper {
         flex-direction: column;

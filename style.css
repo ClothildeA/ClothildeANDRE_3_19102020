@@ -307,7 +307,8 @@ a {
       flex-direction: column; }
     .restau__page--menu .restau__page-food .food-wrapper {
       display: flex;
-      justify-content: space-around; }
+      justify-content: space-around;
+      flex-wrap: wrap; }
       .restau__page--menu .restau__page-food .food-wrapper .food-content {
         min-height: 100px;
         align-content: space-around;
