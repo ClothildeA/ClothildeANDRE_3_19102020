@@ -419,11 +419,17 @@ a {
 @media all and (min-width: 765px) {
 
     /*Home*/
-    .home__operation-wrapper {
+
+    .home__operation {
+        max-width: 1200px;
+        margin: 50px auto;
+
+        &-wrapper {
         flex-direction: row;
         justify-content: center;
+        }
 
-        .home__operation-item {
+        &-item {
             width: 28%;
         }
     }
@@ -432,6 +438,8 @@ a {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        max-width: 1200px;
+        margin: 50px auto;
 
         &__item {
             flex-basis: 45%;
@@ -443,14 +451,20 @@ a {
     .restau__page--menu {
         .restau__page-food {
             width: 98%;
+            display: flex;
+            justify-content: space-around;
+
+            &--wrapper {
+                display: flex;
+                width: 30%;
+                flex-direction: column;
+            }
 
             .food-wrapper {
                 display: flex;
-                justify-content: space-between;
-                flex-wrap: wrap;
+                flex-direction: column;
 
                 .food-content {
-                    flex-basis: 30%;
                     min-height: 100px;
                     align-content: space-around;
 
@@ -467,7 +481,7 @@ a {
         }
 
         .restau__page--menu-button {
-            width: 25%;
+            width: 180px;
         }
     }
 }
