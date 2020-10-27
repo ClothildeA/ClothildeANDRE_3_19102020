@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="fr">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
@@ -10,75 +11,92 @@
     <title>Ohmyfood!</title>
     <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
     <div class="main-wrapper">
-<!--Header-->
+        <!--Header-->
         <header class="header__page">
             <i class="header__icon--return fas fa-arrow-left"><a href="index.html"></a></i>
             <h1 class="header__logo header__logo--page">ohmyfood</h1>
         </header>
-<!--Section Restaurant-page-->
+        <!--Section Restaurant-page-->
         <section class="restau__page">
             <div class="restau__page--background-image img__delice"></div>
             <div class="restau__page--menu">
-                <h2 class="restau__page--menu-title">Le délice des sens</h2>
-                <i class="restau__page--menu-icon far fa-heart"></i>
+                <div class="restau__page--menu-head">
+                    <h2 class="restau__page--menu-head-title">Le délice des sens</h2>
+                    <i class="restau__page--menu-head-icon far fa-heart"></i>
+                </div>
+
                 <div class="restau__page-food">
-                    <h3 class="food-title">ENTRÉES</h3>
-                    <div class="food-content">
-                        <h4 class="food-content__text--h">Tartare de thon</h4>
-                        <p class="food-content__text--p">Assaisonné au yuzu</p>
-                        <h4 class="food-content__text--price">25€</h4>
-                    </div>
-                    <div class="food-content">
-                        <h4 class="food-content__text--h">Bouchée de homard croustillant</h4>
-                        <p class="food-content__text--p">Et sa farandole de petits légumes</p>
-                        <h4 class="food-content__text--price">35€</h4>
-                    </div>
-                    <div class="food-content">
-                        <h4 class="food-content__text--h">Velouté de cèpes</h4>
-                        <p class="food-content__text--p">Aux truffes</p>
-                        <h4 class="food-content__text--price">20€</h4>
-                    </div>
-
-                    <h3 class="food-title">PLATS</h3>
-                    <div class="food-content">
-                        <h4 class="food-content__text--h">Poulet rôti aux herbes de Provence</h4>
-                        <p class="food-content__text--p">Et sa crème de truffe</p>
-                        <h4 class="food-content__text--price">40€</h4>
-                    </div>
-                    <div class="food-content">
-                        <h4 class="food-content__text--h">Langouste rôtie</h4>
-                        <p class="food-content__text--p">Et ses légumes de saison</p>
-                        <h4 class="food-content__text--price">35€</h4>
-                    </div>
-                    <div class="food-content">
-                        <h4 class="food-content__text--h">Côte de boeuf Angus</h4>
-                        <p class="food-content__text--p">Et sa purée de panais</p>
-                        <h4 class="food-content__text--price">44€</h4>
+                    <div class="restau__page-food--wrapper">
+                        <h3 class="food-title">ENTRÉES</h3>
+                        <div class="food-wrapper">
+                            <div class="food-content">
+                                <h4 class="food-content__text--h">Tartare de thon</h4>
+                                <p class="food-content__text--p">Assaisonné au yuzu</p>
+                                <h4 class="food-content__text--price">25€</h4>
+                            </div>
+                            <div class="food-content">
+                                <h4 class="food-content__text--h">Bouchée de homard croustillant</h4>
+                                <p class="food-content__text--p">Et sa farandole de petits légumes</p>
+                                <h4 class="food-content__text--price">35€</h4>
+                            </div>
+                            <div class="food-content">
+                                <h4 class="food-content__text--h">Velouté de cèpes</h4>
+                                <p class="food-content__text--p">Aux truffes</p>
+                                <h4 class="food-content__text--price">20€</h4>
+                            </div>
+                        </div>
                     </div>
 
-                    <h3 class="food-title">DESSERTS</h3>
-                    <div class="food-content">
-                        <h4 class="food-content__text--h">Farandole de desserts</h4>
-                        <p class="food-content__text--p">Du chef</p>
-                        <h4 class="food-content__text--price">18€</h4>
+                    <div class="restau__page-food--wrapper">
+                        <h3 class="food-title">PLATS</h3>
+                        <div class="food-wrapper">
+                            <div class="food-content">
+                                <h4 class="food-content__text--h">Poulet rôti aux herbes de Provence</h4>
+                                <p class="food-content__text--p">Et sa crème de truffe</p>
+                                <h4 class="food-content__text--price">40€</h4>
+                            </div>
+                            <div class="food-content">
+                                <h4 class="food-content__text--h">Langouste rôtie</h4>
+                                <p class="food-content__text--p">Et ses légumes de saison</p>
+                                <h4 class="food-content__text--price">35€</h4>
+                            </div>
+                            <div class="food-content">
+                                <h4 class="food-content__text--h">Côte de boeuf Angus</h4>
+                                <p class="food-content__text--p">Et sa purée de panais</p>
+                                <h4 class="food-content__text--price">44€</h4>
+                            </div>
+                        </div>
                     </div>
-                    <div class="food-content">
-                        <h4 class="food-content__text--h">Crème brulée</h4>
-                        <p class="food-content__text--p">Revisitée</p>
-                        <h4 class="food-content__text--price">22€</h4>
-                    </div>
-                    <div class="food-content">
-                        <h4 class="food-content__text--h">Tiramisu</h4>
-                        <p class="food-content__text--p">À la noisette</p>
-                        <h4 class="food-content__text--price">23€</h4>
+
+                    <div class="restau__page-food--wrapper">
+                        <h3 class="food-title">DESSERTS</h3>
+                        <div class="food-wrapper">
+                            <div class="food-content">
+                                <h4 class="food-content__text--h">Farandole de desserts</h4>
+                                <p class="food-content__text--p">Du chef</p>
+                                <h4 class="food-content__text--price">18€</h4>
+                            </div>
+                            <div class="food-content">
+                                <h4 class="food-content__text--h">Crème brulée</h4>
+                                <p class="food-content__text--p">Revisitée</p>
+                                <h4 class="food-content__text--price">22€</h4>
+                            </div>
+                            <div class="food-content">
+                                <h4 class="food-content__text--h">Tiramisu</h4>
+                                <p class="food-content__text--p">À la noisette</p>
+                                <h4 class="food-content__text--price">23€</h4>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <button name="Commander" class="restau__page--menu-button"><a href="#" class="restau__page--menu-button-link">Commander</a></button>
+                <button name="Commander" class="restau__page--menu-button"><a href="#"
+                        class="restau__page--menu-button-link">Commander</a></button>
             </div>
         </section>
-<!--Footer-->
+        <!--Footer-->
         <footer class="footer">
             <h5 class="footer__logo">ohmyfood</h5>
             <ul class="footer__menu">
@@ -100,4 +118,5 @@
         </footer>
     </div>
 </body>
+
 </html>

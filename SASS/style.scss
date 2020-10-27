@@ -6,15 +6,15 @@ $color-black: #000000;
 $color-white: #FFFFFF;
 
 
-@mixin button-shadow{
+@mixin button-shadow {
     box-shadow: 0px 5px 10px 2px rgb(196, 196, 196);
 }
 
-@mixin item-shadow{
+@mixin item-shadow {
     box-shadow: 0px 5px 10px 2px rgb(226, 226, 226);
 }
 
-@mixin button-background{
+@mixin button-background {
     background: linear-gradient($color-secondary, $color-primary);
 }
 
@@ -28,12 +28,16 @@ body {
     margin: 0;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-weight: 700;
 }
 
-h1, h5 {
-   font-family: 'Shrikhand'; 
+h1,
+h5 {
+    font-family: 'Shrikhand';
 }
 
 h2 {
@@ -41,7 +45,8 @@ h2 {
     font-size: 1.5rem;
 }
 
-h3, p {
+h3,
+p {
     margin: 5px 0;
 }
 
@@ -58,7 +63,7 @@ a {
 /*Header*/
 
 .header__logo {
-    width: 45%;
+    width: fit-content;
     display: flex;
     margin: 17px auto;
 }
@@ -71,13 +76,15 @@ a {
     background-color: darken($color: $color-background, $amount: 5%);
     padding: 15px;
     box-shadow: inset;
-    -webkit-box-shadow: inset 0px 20px 5px -20px rgba(158,158,158,1);
+    -webkit-box-shadow: inset 0px 20px 5px -20px rgba(158, 158, 158, 1);
+
     &-input {
         border: none;
         background-color: darken($color: $color-background, $amount: 5%);
         text-align: center;
         font-size: 1rem;
     }
+
     &-input:focus {
         outline: none;
     }
@@ -90,43 +97,49 @@ a {
     text-align: center;
     padding: 20px 0;
     background-color: $color-background;
+
     &-title {
         margin: 15px 0;
         font-size: 1.5rem;
         padding: 0 50px;
     }
+
     &-content {
         margin: 0 20px;
         font-size: 1rem;
     }
 }
-.home__text-button, .restau__page--menu-button {
+
+.home__text-button,
+.restau__page--menu-button {
     border-radius: 25px;
     @include button-background;
     padding: 15px 20px;
     margin: 35px;
     border: none;
     @include button-shadow;
+
     &-link {
         color: $color-white;
         font-size: 1rem;
     }
-    &-button:hover {
 
-    }
+    &-button:hover {}
 }
 
 .restau__page--menu-button {
     width: 50%;
 }
 
-.home__operation{
+.home__operation {
     margin: 50px 0;
+
     &-wrapper {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
     &-item {
         background-color: lighten($color: $color-background, $amount: 1%);
         display: flex;
@@ -136,6 +149,7 @@ a {
         @include item-shadow;
         width: 80%;
         align-items: center;
+
         &--number {
             background-color: $color-primary;
             border-radius: 50%;
@@ -145,21 +159,27 @@ a {
             color: #fff;
             margin: 20px 20px 20px -20px;
         }
-        &-icon--grey, &-icon--primary {
+
+        &-icon--grey,
+        &-icon--primary {
             font-size: 1.2rem;
         }
+
         &-icon--grey {
             color: darken($color: $color-background, $amount: 45%);
         }
-        &-icon--primary{
+
+        &-icon--primary {
             color: $color-primary;
         }
+
         &--text {
             margin: 20px;
             font-weight: 900;
             font-size: 1rem;
         }
     }
+
     &-item--primary {
         background-color: lighten($color: $color-primary, $amount: 35%);
     }
@@ -170,26 +190,31 @@ a {
 
 .restau {
     margin-bottom: 65px;
+
     &__title {
         display: flex;
         flex-basis: 100%;
     }
+
     &__item {
         @include item-shadow;
         display: flex;
         border-radius: 15px;
         margin: 20px;
         flex-basis: 100%;
+
         &--link {
             display: flex;
             flex-direction: column;
             flex-basis: 100%;
         }
+
         &--background-image {
             border-radius: 15px 15px 0 0;
             height: 175px;
             background-position: center;
             background-size: cover;
+
             &-new {
                 width: fit-content;
                 margin: 10px;
@@ -202,6 +227,7 @@ a {
                 margin-left: auto;
             }
         }
+
         &--content {
             display: flex;
             align-items: center;
@@ -210,20 +236,25 @@ a {
             padding: 10px;
             height: fit-content;
         }
+
         &--icon {
             font-size: 1.5rem;
             margin: 10px;
         }
     }
+
     .img__palette {
         background-image: url(images/restaurants/la-palette-du-gout.jpg);
     }
+
     .img__note {
         background-image: url(images/restaurants/la-note-enchantee.jpg);
     }
+
     .img__francaise {
         background-image: url(images/restaurants/a-la-francaise.jpg);
     }
+
     .img__delice {
         background-image: url(images/restaurants/le-delice-des-sens.jpg);
     }
@@ -234,6 +265,7 @@ a {
 .footer {
     padding: 20px;
     background-color: lighten($color: $color-black, $amount: 20%);
+
     &__logo {
         width: 30%;
         margin: 0 auto 15px 5px;
@@ -241,19 +273,23 @@ a {
         color: $color-white;
         font-size: 1rem;
     }
+
     &__menu {
         margin: 5px;
         padding: 0;
+
         &--link {
             padding-bottom: 9px;
+
             &-icon {
                 margin-right: 5px;
                 font-size: .8rem;
                 color: $color-white;
             }
+
             .footer__meu--link-content {
                 color: $color-white;
-            }         
+            }
         }
     }
 }
@@ -263,15 +299,19 @@ a {
 
 /*Header-page*/
 
-.header__page{
+.header__page {
     display: flex;
     align-items: center;
+
     .header__icon--return {
         margin: 20px;
     }
+
     .header__logo--page {
-        margin: 10px 50px;
+        margin: 10px 55px 10px 0;
         font-size: 1.8rem;
+        flex-grow: 1;
+        justify-content: center;
     }
 }
 
@@ -283,18 +323,23 @@ a {
         background-position: center;
         background-size: cover;
     }
+
     .img__palette {
         background-image: url(images/restaurants/la-palette-du-gout.jpg);
     }
+
     .img__note {
         background-image: url(images/restaurants/la-note-enchantee.jpg);
     }
+
     .img__francaise {
         background-image: url(images/restaurants/a-la-francaise.jpg);
     }
+
     .img__delice {
         background-image: url(images/restaurants/le-delice-des-sens.jpg);
     }
+
     &--menu {
         background-color: $color-background;
         border-radius: 35px 35px 0 0;
@@ -304,31 +349,43 @@ a {
         justify-content: space-around;
         align-items: baseline;
         padding-bottom: 45px;
-        &-title {
-            font-family: 'Shrikhand';
-            font-size: 1.6rem;
-            margin: 25px 0 0 -25px;
-        }
-        &-icon {
-            font-size: 1.6rem;
+
+        &-head {
+            flex-basis: 100%;
+            display: flex;
+            align-items: baseline;
+
+            &-title {
+                font-family: 'Shrikhand';
+                font-size: 1.6rem;
+            }
+
+            &-icon {
+                font-size: 1.6rem;
+                margin: 25px;
+            }
         }
     }
-}  
+}
+
 .restau__page-food {
     width: 93%;
+
     .food-title {
         font-weight: 100;
         font-size: 1rem;
         margin: 40px 10px 15px 5px;
     }
+
     .food-title::after {
         content: "";
         display: block;
         border: solid 1.5px $color-tertiary;
         background-color: $color-tertiary;
-        width: 11%;
+        width: 35px;
         margin: 5px 0;
     }
+
     .food-content {
         background-color: white;
         border-radius: 15px;
@@ -337,20 +394,80 @@ a {
         margin: 15px 0;
         padding: 10px;
         @include item-shadow;
+
         &__text--h {
             width: 100%;
             margin: 0;
             padding: 3px;
             font-size: 1.1rem;
-            }
+        }
+
         &__text--p {
             width: 85%;
             margin: 0;
             padding: 3px;
             font-size: .9rem;
         }
+
         &__text--price {
             margin: 0;
+        }
+    }
+}
+
+
+@media all and (min-width: 765px) {
+
+    /*Home*/
+    .home__operation-wrapper {
+        flex-direction: row;
+        justify-content: center;
+
+        .home__operation-item {
+            width: 28%;
+        }
+    }
+
+    .restau {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        &__item {
+            flex-basis: 45%;
+        }
+    }
+
+    /*Pages*/
+
+    .restau__page--menu {
+        .restau__page-food {
+            width: 98%;
+
+            .food-wrapper {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+                .food-content {
+                    flex-basis: 30%;
+                    min-height: 100px;
+                    align-content: space-around;
+
+                    &__text--p {
+                        width: 100%;
+                    }
+
+                    &__text--price {
+                        width: 100%;
+                        text-align: end;
+                    }
+                }
+            }
+        }
+
+        .restau__page--menu-button {
+            width: 25%;
         }
     }
 }

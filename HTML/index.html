@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="fr">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
@@ -10,123 +11,126 @@
     <title>Ohmyfood!</title>
     <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
-  <div class="main-wrapper">
-<!--Header-->
-      <header class="header">
-          <h1 class="header__logo">ohmyfood</h1>
-      </header>
-<!--Section Home-->
-      <section class="home">
-          <!--Home__search-->
-          <div class="home__search">
-            <i class="fas fa-map-marker-alt icons icon-search"></i>
-            <input type="text" name="citysearch" class="home__search-input" placeholder="Paris, Belleville" />
-          </div>
-          <!--Home__text-->
-          <div class="home__text">
-              <h2 class="home__text-title">Réservez le menu qui vous convient</h2>
-              <p class="home__text-content">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-              <button name="Explorer nos restaurants" class="home__text-button"><a href="#restaurants" class="home__text-button-link">Explorer nos restaurants</a></button>
-          </div>
-          <!--Home__operation-->
-          <div class="home__operation">
-              <h2 class="home__operation-title">Fonctionnement</h2>
-              <div class="home__operation-wrapper">
-                <div class="home__operation-item">
-                    <p class="home__operation-item--number">1</p>
-                    <i class="home__operation-item-icon--grey fas fa-mobile-alt"></i>
-                    <p class="home__operation-item--text">Choisissez un restaurant</p>
-                </div>
-                <div class="home__operation-item">
-                    <p class="home__operation-item--number">2</p>
-                    <i class="home__operation-item-icon--grey fas fa-list-ul"></i>
-                    <p class="home__operation-item--text">Composez votre menu</p>
-                </div>
-                <div class="home__operation-item home__operation-item--primary">
-                    <p class="home__operation-item--number">3</p>
-                    <i class="home__operation-item-icon--primary fas fa-store"></i>
-                    <p class="home__operation-item--text">Dégustez au restaurant</p>
-                </div>
-              </div>
-          </div>
-      </section>
-<!--Section Restaurants-->
-      <section id="restaurants" class="restau">
-          <h2 class="restau__title">Restaurants</h2>
-          <div class="restau__item">
-            <a href="la-palette-du-gout.html" class="restau__item--link">
-                <div class="restau__item--background-image img__palette">
-                    <p class="restau__item--background-image-new">Nouveau</p>
-                </div>
-                <div class="restau__item--content">
-                    <div class="restau__item--content-text">
-                        <h3 class="restau__item--title">La palette du goût</h3>
-                        <p>Ménilmontant</p>
+    <div class="main-wrapper">
+        <!--Header-->
+        <header class="header">
+            <h1 class="header__logo">ohmyfood</h1>
+        </header>
+        <!--Section Home-->
+        <section class="home">
+            <!--Home__search-->
+            <div class="home__search">
+                <i class="fas fa-map-marker-alt icons icon-search"></i>
+                <input type="text" name="citysearch" class="home__search-input" placeholder="Paris, Belleville" />
+            </div>
+            <!--Home__text-->
+            <div class="home__text">
+                <h2 class="home__text-title">Réservez le menu qui vous convient</h2>
+                <p class="home__text-content">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+                <button name="Explorer nos restaurants" class="home__text-button"><a href="#restaurants"
+                        class="home__text-button-link">Explorer nos restaurants</a></button>
+            </div>
+            <!--Home__operation-->
+            <div class="home__operation">
+                <h2 class="home__operation-title">Fonctionnement</h2>
+                <div class="home__operation-wrapper">
+                    <div class="home__operation-item">
+                        <p class="home__operation-item--number">1</p>
+                        <i class="home__operation-item-icon--grey fas fa-mobile-alt"></i>
+                        <p class="home__operation-item--text">Choisissez un restaurant</p>
                     </div>
-                    <i class="restau__item--icon far fa-heart"></i>
-                </div>
-            </a>
-          </div>
-          <div class="restau__item">
-            <a href="la-note-enchantee.html" class="restau__item--link">
-                <div class="restau__item--background-image img__note">
-                    <p class="restau__item--background-image-new">Nouveau</p>
-                </div>
-                <div class="restau__item--content">
-                    <div class="restau__item--content-text">
-                        <h3 class="restau__item--title">La note enchantée</h3>
-                        <p>Charonne</p>
+                    <div class="home__operation-item">
+                        <p class="home__operation-item--number">2</p>
+                        <i class="home__operation-item-icon--grey fas fa-list-ul"></i>
+                        <p class="home__operation-item--text">Composez votre menu</p>
                     </div>
-                    <i class="restau__item--icon far fa-heart"></i>
-                </div>
-            </a>
-          </div>
-          <div class="restau__item">
-            <a href="a-la-francaise.html" class="restau__item--link">
-                <div class="restau__item--background-image img__francaise"></div>
-                <div class="restau__item--content">
-                    <div class="restau__item--content-text">
-                        <h3 class="restau__item--title">À la française</h3>
-                        <p>Cité Rouge</p>
+                    <div class="home__operation-item home__operation-item--primary">
+                        <p class="home__operation-item--number">3</p>
+                        <i class="home__operation-item-icon--primary fas fa-store"></i>
+                        <p class="home__operation-item--text">Dégustez au restaurant</p>
                     </div>
-                    <i class="restau__item--icon far fa-heart"></i>
                 </div>
-            </a>
-          </div>
-          <div class="restau__item">
-            <a href="le-delice-des-sens.html" class="restau__item--link">
-                <div class="restau__item--background-image img__delice"></div>
-                <div class="restau__item--content">
-                    <div class="restau__item--content-text">
-                        <h3 class="restau__item--title">Le délice des sens</h3>
-                        <p>Folie-Méricourt</p>
+            </div>
+        </section>
+        <!--Section Restaurants-->
+        <section id="restaurants" class="restau">
+            <h2 class="restau__title">Restaurants</h2>
+            <div class="restau__item">
+                <a href="la-palette-du-gout.html" class="restau__item--link">
+                    <div class="restau__item--background-image img__palette">
+                        <p class="restau__item--background-image-new">Nouveau</p>
                     </div>
-                    <i class="restau__item--icon far fa-heart"></i>
-                </div>
-            </a>
-          </div>
-      </section>
-<!--Footer-->
-      <footer class="footer">
-        <h5 class="footer__logo">ohmyfood</h5>
-        <ul class="footer__menu">
-            <li class="footer__menu--link">
-                <i class="footer__menu--link-icon fas fa-utensils"></i>
-                <a href="#" class="footer__meu--link-content">Proposer un restaurant</a>
-            </li>
-            <li class="footer__menu--link">
-                <i class="footer__menu--link-icon fas fa-hands-helping"></i>
-                <a href="#" class="footer__meu--link-content">Devenir partenaire</a>
-            </li>
-            <li class="footer__menu--link">
-                <a href="#" class="footer__meu--link-content">Mentions légales</a>
-            </li>
-            <li class="footer__menu--link">
-                <a href="mailto:#" class="footer__meu--link-content">Contact</a>
-            </li>
-        </ul>
-      </footer>
-  </div>
+                    <div class="restau__item--content">
+                        <div class="restau__item--content-text">
+                            <h3 class="restau__item--title">La palette du goût</h3>
+                            <p>Ménilmontant</p>
+                        </div>
+                        <i class="restau__item--icon far fa-heart"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="restau__item">
+                <a href="la-note-enchantee.html" class="restau__item--link">
+                    <div class="restau__item--background-image img__note">
+                        <p class="restau__item--background-image-new">Nouveau</p>
+                    </div>
+                    <div class="restau__item--content">
+                        <div class="restau__item--content-text">
+                            <h3 class="restau__item--title">La note enchantée</h3>
+                            <p>Charonne</p>
+                        </div>
+                        <i class="restau__item--icon far fa-heart"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="restau__item">
+                <a href="a-la-francaise.html" class="restau__item--link">
+                    <div class="restau__item--background-image img__francaise"></div>
+                    <div class="restau__item--content">
+                        <div class="restau__item--content-text">
+                            <h3 class="restau__item--title">À la française</h3>
+                            <p>Cité Rouge</p>
+                        </div>
+                        <i class="restau__item--icon far fa-heart"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="restau__item">
+                <a href="le-delice-des-sens.html" class="restau__item--link">
+                    <div class="restau__item--background-image img__delice"></div>
+                    <div class="restau__item--content">
+                        <div class="restau__item--content-text">
+                            <h3 class="restau__item--title">Le délice des sens</h3>
+                            <p>Folie-Méricourt</p>
+                        </div>
+                        <i class="restau__item--icon far fa-heart"></i>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <!--Footer-->
+        <footer class="footer">
+            <h5 class="footer__logo">ohmyfood</h5>
+            <ul class="footer__menu">
+                <li class="footer__menu--link">
+                    <i class="footer__menu--link-icon fas fa-utensils"></i>
+                    <a href="#" class="footer__meu--link-content">Proposer un restaurant</a>
+                </li>
+                <li class="footer__menu--link">
+                    <i class="footer__menu--link-icon fas fa-hands-helping"></i>
+                    <a href="#" class="footer__meu--link-content">Devenir partenaire</a>
+                </li>
+                <li class="footer__menu--link">
+                    <a href="#" class="footer__meu--link-content">Mentions légales</a>
+                </li>
+                <li class="footer__menu--link">
+                    <a href="mailto:#" class="footer__meu--link-content">Contact</a>
+                </li>
+            </ul>
+        </footer>
+    </div>
 </body>
+
 </html>
