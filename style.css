@@ -31,13 +31,93 @@ a {
   text-decoration: none;
   color: #000000; }
 
+/*Button + animation*/
+.home__text-button,
+.restau__page--menu-button {
+  color: #FFFFFF;
+  font-size: 1rem;
+  border-radius: 25px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  padding: 15px 20px;
+  margin: 35px;
+  border: none;
+  box-shadow: 0px 5px 10px 2px #c4c4c4;
+  opacity: 1; }
+  .home__text-button:hover,
+  .restau__page--menu-button:hover {
+    transition: opacity 250ms;
+    opacity: 0.8;
+    box-shadow: 0px 5px 10px 2px #8e8e8e; }
+
+.restau__page--menu-button {
+  width: 185px; }
+
+/*Animations*/
+.food-content {
+  animation: fadein 4s;
+  -moz-animation: fadein 4s;
+  /* Firefox */
+  -webkit-animation: fadein 4s;
+  /* Safari et Chrome */
+  -o-animation: fadein 4s;
+  /* Opera */ }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@-moz-keyframes fadein {
+  /* sur Firefox */
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@-webkit-keyframes fadein {
+  /* sur Safari et Chrome */
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@-o-keyframes fadein {
+  /* sur Opera */
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+/*Footer*/
+.footer {
+  padding: 20px;
+  background-color: #333333; }
+  .footer__logo {
+    width: 30%;
+    margin: 0 auto 15px 5px;
+    justify-content: center;
+    color: #FFFFFF;
+    font-size: 1rem; }
+  .footer__menu {
+    margin: 5px;
+    padding: 0; }
+    .footer__menu--link {
+      padding-bottom: 9px; }
+      .footer__menu--link-icon {
+        margin-right: 5px;
+        font-size: .8rem;
+        color: #FFFFFF; }
+      .footer__menu--link .footer__meu--link-content {
+        color: #FFFFFF; }
+
 /*Header*/
 .header__logo {
   width: fit-content;
   display: flex;
   margin: 17px auto; }
 
-/*home*/
+/*section Home*/
 .home__search {
   display: flex;
   justify-content: center;
@@ -67,22 +147,6 @@ a {
   .home__text-content {
     margin: 0 20px;
     font-size: 1rem; }
-
-.home__text-button,
-.restau__page--menu-button {
-  border-radius: 25px;
-  background: linear-gradient(#FF79DA, #9356DC);
-  padding: 15px 20px;
-  margin: 35px;
-  border: none;
-  box-shadow: 0px 5px 10px 2px #c4c4c4; }
-  .home__text-button-link,
-  .restau__page--menu-button-link {
-    color: #FFFFFF;
-    font-size: 1rem; }
-
-.restau__page--menu-button {
-  width: 50%; }
 
 .home__operation {
   margin: 50px 0; }
@@ -120,7 +184,7 @@ a {
   .home__operation-item--primary {
     background-color: #f2eafb; }
 
-/*Restau*/
+/*section Restau*/
 .restau {
   margin-bottom: 65px; }
   .restau__title {
@@ -135,7 +199,8 @@ a {
     .restau__item--link {
       display: flex;
       flex-direction: column;
-      flex-basis: 100%; }
+      flex-basis: 100%;
+      height: fit-content; }
     .restau__item--background-image {
       border-radius: 15px 15px 0 0;
       height: 175px;
@@ -160,7 +225,23 @@ a {
       height: fit-content; }
     .restau__item--icon {
       font-size: 1.5rem;
+      margin: 10px;
+      opacity: 1;
+      z-index: 1; }
+      .restau__item--icon:hover {
+        opacity: 0;
+        z-index: -1; }
+    .restau__item--icon-solid {
+      opacity: 0;
+      z-index: -1;
+      font-size: 1.5rem;
       margin: 10px; }
+      .restau__item--icon-solid:hover {
+        opacity: 1;
+        z-index: 1;
+        background: linear-gradient(#FF79DA, #9356DC);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; }
   .restau .img__palette {
     background-image: url(images/restaurants/la-palette-du-gout.jpg); }
   .restau .img__note {
@@ -170,27 +251,24 @@ a {
   .restau .img__delice {
     background-image: url(images/restaurants/le-delice-des-sens.jpg); }
 
-/*Footer*/
-.footer {
-  padding: 20px;
-  background-color: #333333; }
-  .footer__logo {
-    width: 30%;
-    margin: 0 auto 15px 5px;
+@media all and (min-width: 765px) {
+  /*Home*/
+  .home__operation {
+    max-width: 1200px;
+    margin: 50px auto; }
+    .home__operation-wrapper {
+      flex-direction: row;
+      justify-content: center; }
+    .home__operation-item {
+      width: 28%; }
+  .restau {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    color: #FFFFFF;
-    font-size: 1rem; }
-  .footer__menu {
-    margin: 5px;
-    padding: 0; }
-    .footer__menu--link {
-      padding-bottom: 9px; }
-      .footer__menu--link-icon {
-        margin-right: 5px;
-        font-size: .8rem;
-        color: #FFFFFF; }
-      .footer__menu--link .footer__meu--link-content {
-        color: #FFFFFF; }
+    max-width: 1200px;
+    margin: 50px auto; }
+    .restau__item {
+      flex-basis: 44%; } }
 
 /*Pages*/
 /*Header-page*/
@@ -279,50 +357,34 @@ a {
       margin: 0; }
 
 @media all and (min-width: 765px) {
-  /*Home*/
-  .home__operation {
-    max-width: 1200px;
-    margin: 50px auto; }
-    .home__operation-wrapper {
-      flex-direction: row;
-      justify-content: center; }
-    .home__operation-item {
-      width: 28%; }
-  .restau {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 1200px;
-    margin: 50px auto; }
-    .restau__item {
-      flex-basis: 45%; }
   /*Pages*/
-  .restau__page--menu .restau__page-food {
+  .restau__page-food {
     width: 98%;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap; }
-    .restau__page--menu .restau__page-food--wrapper {
+    .restau__page-food--wrapper {
       display: flex;
-      flex-direction: column; }
-    .restau__page--menu .restau__page-food .food-wrapper {
+      flex-direction: column;
+      flex-basis: 100%; }
+    .restau__page-food .food-wrapper {
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap; }
-      .restau__page--menu .restau__page-food .food-wrapper .food-content {
+      .restau__page-food .food-wrapper .food-content {
         min-height: 100px;
         align-content: space-around;
         flex-basis: 30%; }
-        .restau__page--menu .restau__page-food .food-wrapper .food-content__text--p {
+        .restau__page-food .food-wrapper .food-content__text--p {
           width: 100%; }
-        .restau__page--menu .restau__page-food .food-wrapper .food-content__text--price {
+        .restau__page-food .food-wrapper .food-content__text--price {
           width: 100%;
-          text-align: end; }
-  .restau__page--menu .restau__page--menu-button {
-    width: 180px; } }
+          text-align: end; } }
 
 @media all and (min-width: 1025px) {
+  .restau__page--menu-head {
+    padding: 0 20px; }
   .food-wrapper {
     flex-direction: column; }
   .restau__page-food--wrapper {
-    width: 30%; } }
+    flex-basis: 30%; } }

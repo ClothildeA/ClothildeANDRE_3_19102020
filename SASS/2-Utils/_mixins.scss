@@ -1,0 +1,15 @@
+@mixin button-shadow {
+    box-shadow: 0px 5px 10px 2px rgb(196, 196, 196);
+}
+
+@mixin button-shadow--hover {
+    box-shadow: 0px 5px 10px 2px rgb(142, 142, 142);
+}
+
+@mixin item-shadow {
+    box-shadow: 0px 5px 10px 2px rgb(226, 226, 226);
+}
+
+@mixin button-background {
+    background: linear-gradient($color-secondary, $color-primary);
+}

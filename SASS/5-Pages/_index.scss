@@ -1,0 +1,236 @@
+/*Header*/
+
+.header__logo {
+    width: fit-content;
+    display: flex;
+    margin: 17px auto;
+}
+
+
+/*section Home*/
+
+.home__search {
+    display: flex;
+    justify-content: center;
+    background-color: darken($color: $color-background, $amount: 5%);
+    padding: 15px;
+    box-shadow: inset;
+    -webkit-box-shadow: inset 0px 20px 5px -20px rgba(158, 158, 158, 1);
+
+    &-input {
+        border: none;
+        background-color: darken($color: $color-background, $amount: 5%);
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    &-input:focus {
+        outline: none;
+    }
+}
+
+.home__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 0;
+    background-color: $color-background;
+
+    &-title {
+        margin: 15px 0;
+        font-size: 1.5rem;
+        padding: 0 50px;
+    }
+
+    &-content {
+        margin: 0 20px;
+        font-size: 1rem;
+    }
+}
+
+.home__operation {
+    margin: 50px 0;
+
+    &-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &-item {
+        background-color: lighten($color: $color-background, $amount: 1%);
+        display: flex;
+        margin: 10px 15px 15px 15px;
+        padding: 5px;
+        border-radius: 20px;
+        @include item-shadow;
+        width: 80%;
+        align-items: center;
+
+        &--number {
+            background-color: $color-primary;
+            border-radius: 50%;
+            font-size: .9rem;
+            padding: 4px 8px;
+            text-align: center;
+            color: #fff;
+            margin: 20px 20px 20px -20px;
+        }
+
+        &-icon--grey,
+        &-icon--primary {
+            font-size: 1.2rem;
+        }
+
+        &-icon--grey {
+            color: darken($color: $color-background, $amount: 45%);
+        }
+
+        &-icon--primary {
+            color: $color-primary;
+        }
+
+        &--text {
+            margin: 20px;
+            font-weight: 900;
+            font-size: 1rem;
+        }
+    }
+
+    &-item--primary {
+        background-color: lighten($color: $color-primary, $amount: 35%);
+    }
+
+}
+
+/*section Restau*/
+
+.restau {
+    margin-bottom: 65px;
+
+    &__title {
+        display: flex;
+        flex-basis: 100%;
+    }
+
+    &__item {
+        @include item-shadow;
+        display: flex;
+        border-radius: 15px;
+        margin: 20px;
+        flex-basis: 100%;
+
+        &--link {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 100%;
+            height: fit-content;
+        }
+
+        &--background-image {
+            border-radius: 15px 15px 0 0;
+            height: 175px;
+            background-position: center;
+            background-size: cover;
+
+            &-new {
+                width: fit-content;
+                margin: 10px;
+                padding: 5px 10px;
+                background-color: $color-tertiary;
+                color: darken($color: $color-tertiary, $amount: 40%);
+                font-size: .9rem;
+                border-radius: 2px;
+                display: flex;
+                margin-left: auto;
+            }
+        }
+
+        &--content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-basis: 100%;
+            padding: 10px;
+            height: fit-content;
+        }
+
+        &--icon {
+            font-size: 1.5rem;
+            margin: 10px;
+            opacity: 1;
+            z-index: 1;
+
+            &:hover {
+                opacity: 0;
+                z-index: -1;
+            }
+        }
+
+        &--icon-solid {
+            opacity: 0;
+            z-index: -1;
+            font-size: 1.5rem;
+            margin: 10px;
+
+            &:hover {
+                opacity: 1;
+                z-index: 1;
+                @include button-background;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+
+    .img__palette {
+        background-image: url(images/restaurants/la-palette-du-gout.jpg);
+    }
+
+    .img__note {
+        background-image: url(images/restaurants/la-note-enchantee.jpg);
+    }
+
+    .img__francaise {
+        background-image: url(images/restaurants/a-la-francaise.jpg);
+    }
+
+    .img__delice {
+        background-image: url(images/restaurants/le-delice-des-sens.jpg);
+    }
+}
+
+@media all and (min-width: 765px)
+
+/*Tablette*/
+    {
+
+    /*Home*/
+
+    .home__operation {
+        max-width: 1200px;
+        margin: 50px auto;
+
+        &-wrapper {
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        &-item {
+            width: 28%;
+        }
+    }
+
+    .restau {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 1200px;
+        margin: 50px auto;
+
+        &__item {
+            flex-basis: 44%;
+        }
+    }
+}

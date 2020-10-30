@@ -1,0 +1,181 @@
+/*Pages*/
+
+/*Header-page*/
+
+.header__page {
+    display: flex;
+    align-items: center;
+
+    .header__icon--return {
+        margin: 20px;
+    }
+
+    .header__logo--page {
+        margin: 10px 55px 10px 0;
+        font-size: 1.8rem;
+        flex-grow: 1;
+        justify-content: center;
+    }
+}
+
+/*Restau-page*/
+
+.restau__page {
+    &--background-image {
+        height: 275px;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .img__palette {
+        background-image: url(images/restaurants/la-palette-du-gout.jpg);
+    }
+
+    .img__note {
+        background-image: url(images/restaurants/la-note-enchantee.jpg);
+    }
+
+    .img__francaise {
+        background-image: url(images/restaurants/a-la-francaise.jpg);
+    }
+
+    .img__delice {
+        background-image: url(images/restaurants/le-delice-des-sens.jpg);
+    }
+
+    &--menu {
+        background-color: $color-background;
+        border-radius: 35px 35px 0 0;
+        margin-top: -50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: baseline;
+        padding-bottom: 45px;
+
+        &-head {
+            flex-basis: 100%;
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+
+            &-title {
+                font-family: 'Shrikhand';
+                font-size: 1.6rem;
+            }
+
+            &-icon {
+                font-size: 1.6rem;
+                margin: 25px;
+            }
+        }
+    }
+}
+
+.restau__page-food {
+    width: 93%;
+
+    .food-title {
+        font-weight: 100;
+        font-size: 1rem;
+        margin: 40px 10px 15px 5px;
+    }
+
+    .food-title::after {
+        content: "";
+        display: block;
+        border: solid 1.5px $color-tertiary;
+        background-color: $color-tertiary;
+        width: 35px;
+        margin: 5px 0;
+    }
+
+    .food-content {
+        background-color: white;
+        border-radius: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 15px 0;
+        padding: 10px;
+        @include item-shadow;
+
+        &__text--h {
+            width: 100%;
+            margin: 0;
+            padding: 3px;
+            font-size: 1.1rem;
+        }
+
+        &__text--p {
+            width: 85%;
+            margin: 0;
+            padding: 3px;
+            font-size: .9rem;
+        }
+
+        &__text--price {
+            margin: 0;
+        }
+    }
+}
+
+
+@media all and (min-width: 765px)
+
+/*Tablette*/
+{
+    /*Pages*/
+
+    .restau__page-food {
+        width: 98%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        &--wrapper {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 100%;
+        }
+
+        .food-wrapper {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+
+            .food-content {
+                min-height: 100px;
+                align-content: space-around;
+                flex-basis: 30%;
+
+                &__text--p {
+                    width: 100%;
+                }
+
+                &__text--price {
+                    width: 100%;
+                    text-align: end;
+                }
+            }
+        }
+    }
+}
+
+@media all and (min-width: 1025px)
+
+/*Desktop*/
+    {
+    
+    .restau__page--menu-head {
+        padding: 0 20px;
+    }
+
+    .food-wrapper {
+        flex-direction: column;
+    }
+
+    .restau__page-food--wrapper {
+        flex-basis: 30%;
+    }
+
+}

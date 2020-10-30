@@ -1,0 +1,33 @@
+/*Footer*/
+
+.footer {
+    padding: 20px;
+    background-color: lighten($color: $color-black, $amount: 20%);
+
+    &__logo {
+        width: 30%;
+        margin: 0 auto 15px 5px;
+        justify-content: center;
+        color: $color-white;
+        font-size: 1rem;
+    }
+
+    &__menu {
+        margin: 5px;
+        padding: 0;
+
+        &--link {
+            padding-bottom: 9px;
+
+            &-icon {
+                margin-right: 5px;
+                font-size: .8rem;
+                color: $color-white;
+            }
+
+            .footer__meu--link-content {
+                color: $color-white;
+            }
+        }
+    }
+}

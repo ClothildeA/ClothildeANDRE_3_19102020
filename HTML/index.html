@@ -4,7 +4,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="p2-reservia.css" />
     <script src="https://kit.fontawesome.com/2683cb0723.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -29,8 +28,9 @@
             <div class="home__text">
                 <h2 class="home__text-title">Réservez le menu qui vous convient</h2>
                 <p class="home__text-content">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-                <button name="Explorer nos restaurants" class="home__text-button"><a href="#restaurants"
-                        class="home__text-button-link">Explorer nos restaurants</a></button>
+                <a href="#restaurants" class="home__text-button-link">
+                    <button name="Explorer nos restaurants" class="home__text-button">Explorer nos restaurants</button>
+                </a>
             </div>
             <!--Home__operation-->
             <div class="home__operation">
@@ -68,6 +68,7 @@
                             <p>Ménilmontant</p>
                         </div>
                         <i class="restau__item--icon far fa-heart"></i>
+                        <i class="restau__item--icon-solid fas fa-heart"></i>
                     </div>
                 </a>
             </div>
