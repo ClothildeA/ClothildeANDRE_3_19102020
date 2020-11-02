@@ -2,6 +2,7 @@
 
 .header__logo {
     width: fit-content;
+    width: -moz-fit-content;
     display: flex;
     margin: 17px auto;
 }
@@ -136,6 +137,7 @@
 
             &-new {
                 width: fit-content;
+                width: -moz-fit-content;
                 margin: 10px;
                 padding: 5px 10px;
                 background-color: $color-tertiary;
@@ -153,7 +155,7 @@
             justify-content: space-between;
             flex-basis: 100%;
             padding: 10px;
-            height: fit-content;
+            height: 60px;
         }
 
         &--icon {
@@ -178,8 +180,6 @@
                 opacity: 1;
                 z-index: 1;
                 @include button-background;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
             }
         }
     }

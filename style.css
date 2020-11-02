@@ -53,41 +53,134 @@ a {
   width: 185px; }
 
 /*Animations*/
+/*Loading Spinner*/
+@keyframes spinner {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+.page-loading {
+  background-color: #99E2D0;
+  height: 700px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .page-loading .page-loading_section {
+    width: 214px;
+    height: 214px;
+    display: inline-block;
+    overflow: hidden; }
+    .page-loading .page-loading_section--spinner {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform: translateZ(0) scale(1);
+      backface-visibility: hidden;
+      transform-origin: 0 0;
+      color: #FFFFFF;
+      font-family: 'Shrikhand';
+      font-size: 1.4rem; }
+
+.page-loading_section--spinner div {
+  left: 100px;
+  top: 50px;
+  position: absolute;
+  animation: spinner linear 1s infinite;
+  background: #FFFFFF;
+  width: 13px;
+  height: 26px;
+  border-radius: 6px / 12px;
+  transform-origin: 6px 55px;
+  box-sizing: content-box; }
+  .page-loading_section--spinner div:nth-child(1) {
+    transform: rotate(0deg);
+    animation-delay: -0.9166666666666666s; }
+  .page-loading_section--spinner div:nth-child(2) {
+    transform: rotate(30deg);
+    animation-delay: -0.8333333333333334s; }
+  .page-loading_section--spinner div:nth-child(3) {
+    transform: rotate(60deg);
+    animation-delay: -0.75s; }
+  .page-loading_section--spinner div:nth-child(4) {
+    transform: rotate(90deg);
+    animation-delay: -0.6666666666666666s; }
+  .page-loading_section--spinner div:nth-child(5) {
+    transform: rotate(120deg);
+    animation-delay: -0.5833333333333334s; }
+  .page-loading_section--spinner div:nth-child(6) {
+    transform: rotate(150deg);
+    animation-delay: -0.5s; }
+  .page-loading_section--spinner div:nth-child(7) {
+    transform: rotate(180deg);
+    animation-delay: -0.4166666666666667s; }
+  .page-loading_section--spinner div:nth-child(8) {
+    transform: rotate(210deg);
+    animation-delay: -0.3333333333333333s; }
+  .page-loading_section--spinner div:nth-child(9) {
+    transform: rotate(240deg);
+    animation-delay: -0.25s; }
+  .page-loading_section--spinner div:nth-child(10) {
+    transform: rotate(270deg);
+    animation-delay: -0.16666666666666666s; }
+  .page-loading_section--spinner div:nth-child(11) {
+    transform: rotate(300deg);
+    animation-delay: -0.08333333333333333s; }
+  .page-loading_section--spinner div:nth-child(12) {
+    transform: rotate(330deg);
+    animation-delay: 0s; }
+
+/*Chargement Menu*/
 .food-content {
-  animation: fadein 4s;
-  -moz-animation: fadein 4s;
-  /* Firefox */
-  -webkit-animation: fadein 4s;
-  /* Safari et Chrome */
-  -o-animation: fadein 4s;
-  /* Opera */ }
+  animation: slide-top 1800ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation: slide-top 1800ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -moz-animation: slide-top 1800ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -o-animation: slide-top 1800ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
 
-@keyframes fadein {
+@keyframes slide-top {
   from {
-    opacity: 0; }
+    opacity: 0;
+    transform: translateY(0); }
   to {
-    opacity: 1; } }
+    opacity: 1;
+    transform: translateY(-20px); } }
 
-@-moz-keyframes fadein {
+@-moz-keyframes slide-top {
   /* sur Firefox */
   from {
-    opacity: 0; }
+    opacity: 0;
+    transform: translateY(0); }
   to {
-    opacity: 1; } }
+    opacity: 1;
+    transform: translateY(-20px); } }
 
-@-webkit-keyframes fadein {
+@-webkit-keyframes slide-top {
   /* sur Safari et Chrome */
   from {
-    opacity: 0; }
+    opacity: 0;
+    transform: translateY(0); }
   to {
-    opacity: 1; } }
+    opacity: 1;
+    transform: translateY(-20px); } }
 
-@-o-keyframes fadein {
+@-o-keyframes slide-top {
   /* sur Opera */
   from {
-    opacity: 0; }
+    opacity: 0;
+    transform: translateY(0); }
   to {
-    opacity: 1; } }
+    opacity: 1;
+    transform: translateY(-20px); } }
+
+.item-2 {
+  animation-delay: 150ms; }
+
+.item-3 {
+  animation-delay: 300ms; }
+
+.item-4 {
+  animation-delay: 450ms; }
 
 /*Footer*/
 .footer {
@@ -114,6 +207,7 @@ a {
 /*Header*/
 .header__logo {
   width: fit-content;
+  width: -moz-fit-content;
   display: flex;
   margin: 17px auto; }
 
@@ -208,6 +302,7 @@ a {
       background-size: cover; }
       .restau__item--background-image-new {
         width: fit-content;
+        width: -moz-fit-content;
         margin: 10px;
         padding: 5px 10px;
         background-color: #99E2D0;
@@ -222,7 +317,7 @@ a {
       justify-content: space-between;
       flex-basis: 100%;
       padding: 10px;
-      height: fit-content; }
+      height: 60px; }
     .restau__item--icon {
       font-size: 1.5rem;
       margin: 10px;
@@ -239,9 +334,7 @@ a {
       .restau__item--icon-solid:hover {
         opacity: 1;
         z-index: 1;
-        background: linear-gradient(#FF79DA, #9356DC);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent; }
+        background: linear-gradient(#FF79DA, #9356DC); }
   .restau .img__palette {
     background-image: url(images/restaurants/la-palette-du-gout.jpg); }
   .restau .img__note {
@@ -324,10 +417,12 @@ a {
 
 .restau__page-food {
   width: 93%; }
+  .restau__page-food--wrapper {
+    margin-bottom: 50px; }
   .restau__page-food .food-title {
     font-weight: 100;
     font-size: 1rem;
-    margin: 40px 10px 15px 5px; }
+    margin: 40px 10px 40px 5px; }
   .restau__page-food .food-title::after {
     content: "";
     display: block;

@@ -75,10 +75,14 @@
 .restau__page-food {
     width: 93%;
 
+    &--wrapper {
+        margin-bottom: 50px;
+    }
+
     .food-title {
         font-weight: 100;
         font-size: 1rem;
-        margin: 40px 10px 15px 5px;
+        margin: 40px 10px 40px 5px;
     }
 
     .food-title::after {
