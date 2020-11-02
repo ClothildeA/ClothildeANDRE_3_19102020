@@ -60,6 +60,27 @@ a {
   100% {
     opacity: 0; } }
 
+@-moz-keyframes spinner {
+  /* sur Firefox */
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@-webkit-keyframes spinner {
+  /* sur Safari et Chrome */
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@-o-keyframes spinner {
+  /* sur Opera */
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
 .page-loading {
   background-color: #99E2D0;
   height: 700px;
@@ -318,14 +339,26 @@ a {
       flex-basis: 100%;
       padding: 10px;
       height: 60px; }
-    .restau__item--icon {
+    .restau__item .icon-favorite {
       font-size: 1.5rem;
       margin: 10px;
-      opacity: 1;
-      z-index: 1; }
-      .restau__item--icon:hover {
-        opacity: 0;
-        z-index: -1; }
+      position: relative;
+      height: 23px;
+      width: 23px; }
+      .restau__item .icon-favorite::before {
+        content: '\f004';
+        font-family: 'Font Awesome 5 free';
+        position: absolute;
+        font-weight: 400; }
+      .restau__item .icon-favorite:hover::after {
+        content: '\f004';
+        font-family: 'Font Awesome 5 free';
+        position: absolute;
+        background: linear-gradient(#FF79DA, #9356DC);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 900;
+        transition: opacity 500ms; }
     .restau__item--icon-solid {
       opacity: 0;
       z-index: -1;

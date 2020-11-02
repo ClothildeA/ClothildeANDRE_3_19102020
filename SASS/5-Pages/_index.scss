@@ -157,33 +157,36 @@
             padding: 10px;
             height: 60px;
         }
-
-        &--icon {
-            font-size: 1.5rem;
-            margin: 10px;
-            opacity: 1;
-            z-index: 1;
-
-            &:hover {
-                opacity: 0;
-                z-index: -1;
-            }
-        }
-
-        &--icon-solid {
-            opacity: 0;
-            z-index: -1;
-            font-size: 1.5rem;
-            margin: 10px;
-
-            &:hover {
-                opacity: 1;
-                z-index: 1;
-                @include button-background;
-            }
-        }
     }
 
+    .icon-favorite {
+        font-size: 1.5rem;
+        margin: 10px;
+        position: relative;
+        height: 23px;
+        width: 23px;
+
+        &::before {
+            content: '\f004';
+            font-family: 'Font Awesome 5 free';
+            position: absolute;
+            font-weight: 400;
+
+        }
+
+        &:hover::after {
+            content: '\f004';
+            font-family: 'Font Awesome 5 free';
+            position: absolute;
+            @include button-background;
+            -webkit-background-clip: text;      
+            -webkit-text-fill-color: transparent;
+            font-weight: 900; 
+            transition: opacity 500ms;
+                   
+        }
+    }
+    
     .img__palette {
         background-image: url(images/restaurants/la-palette-du-gout.jpg);
     }
