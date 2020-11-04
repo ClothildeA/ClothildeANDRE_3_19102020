@@ -50,6 +50,8 @@
     }
 }
 
+/*Load index*/
+
 @keyframes load{
     0% {
         transform: translateX(-9999px);
@@ -62,12 +64,51 @@
     }
 }
 
+@-moz-keyframes load{
+    0% {
+        transform: translateX(-9999px);
+        z-index: 0;
+    }
+    100% {
+        transform: translateX(0);
+        z-index: 1;
+        position: relative;
+    }
+}
+
+@-webkit-keyframes load{
+    0% {
+        transform: translateX(-9999px);
+        z-index: 0;
+    }
+    100% {
+        transform: translateX(0);
+        z-index: 1;
+        position: relative;
+    }
+}
+
+@-o-keyframes load{
+    0% {
+        transform: translateX(-9999px);
+        z-index: 0;
+    }
+    100% {
+        transform: translateX(0);
+        z-index: 1;
+        position: relative;
+    }
+}
+
+
 .main-wrapper__load {
     z-index: -1;
-    position: fixed;
+    position: -webkit-sticky;
+    position: sticky;
     animation: load 0ms 2s both;
     background-color: $color-white;
     width: 100%;
+    overflow: hidden;
 }
 
 .page-loading {

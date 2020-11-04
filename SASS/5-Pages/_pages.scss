@@ -144,7 +144,8 @@
             transition-timing-function: ease-in-out;
             background-color: $color-tertiary;
             position: absolute;
-            transform: translate(500%, -10px);
+            transform: translate(500%, 0);
+            top: 0;
 
             &__icon {
                 color: $color-white;
@@ -159,7 +160,7 @@
         &:hover {
 
             .anim-food{
-                transform: translate(395%, -10px);
+                transform: translate(395%, 0);
 
                 &__icon {
                     transform: rotate(360deg);
@@ -240,6 +241,7 @@
 
     .restau__page-food--wrapper {
         flex-basis: 30%;
+        display: block;
     }
 
 }

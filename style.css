@@ -113,7 +113,35 @@ a {
   100% {
     opacity: 0; } }
 
+/*Load index*/
 @keyframes load {
+  0% {
+    transform: translateX(-9999px);
+    z-index: 0; }
+  100% {
+    transform: translateX(0);
+    z-index: 1;
+    position: relative; } }
+
+@-moz-keyframes load {
+  0% {
+    transform: translateX(-9999px);
+    z-index: 0; }
+  100% {
+    transform: translateX(0);
+    z-index: 1;
+    position: relative; } }
+
+@-webkit-keyframes load {
+  0% {
+    transform: translateX(-9999px);
+    z-index: 0; }
+  100% {
+    transform: translateX(0);
+    z-index: 1;
+    position: relative; } }
+
+@-o-keyframes load {
   0% {
     transform: translateX(-9999px);
     z-index: 0; }
@@ -124,10 +152,12 @@ a {
 
 .main-wrapper__load {
   z-index: -1;
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   animation: load 0ms 2s both;
   background-color: #FFFFFF;
-  width: 100%; }
+  width: 100%;
+  overflow: hidden; }
 
 .page-loading {
   background: linear-gradient(#99E2D0, #FFFFFF);
@@ -371,7 +401,8 @@ a {
       border-radius: 15px 15px 0 0;
       height: 175px;
       background-position: center;
-      background-size: cover; }
+      background-size: cover;
+      flex-shrink: 0; }
       .restau__item--background-image-new {
         width: fit-content;
         width: -moz-fit-content;
@@ -528,7 +559,8 @@ a {
       transition-timing-function: ease-in-out;
       background-color: #99E2D0;
       position: absolute;
-      transform: translate(500%, -10px); }
+      transform: translate(500%, 0);
+      top: 0; }
       .restau__page-food .food-content .anim-food__icon {
         color: #FFFFFF;
         font-size: 1.5rem;
@@ -537,7 +569,7 @@ a {
         transition-timing-function: ease-in-out;
         transform: rotate(0); }
     .restau__page-food .food-content:hover .anim-food {
-      transform: translate(395%, -10px); }
+      transform: translate(395%, 0); }
       .restau__page-food .food-content:hover .anim-food__icon {
         transform: rotate(360deg); }
     .restau__page-food .food-content:hover .food-content__text--price {
@@ -578,4 +610,5 @@ a {
   .food-wrapper {
     flex-direction: column; }
   .restau__page-food--wrapper {
-    flex-basis: 30%; } }
+    flex-basis: 30%;
+    display: block; } }

@@ -134,6 +134,7 @@
             height: 175px;
             background-position: center;
             background-size: cover;
+            flex-shrink: 0;
 
             &-new {
                 width: fit-content;
