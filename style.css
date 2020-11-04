@@ -72,7 +72,7 @@ a {
     font-weight: 900;
     transform: scale(0);
     opacity: 0;
-    transition: all 500ms ease-in-out;
+    transition: all 700ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
     z-index: 2; }
   .icon-favorite::after {
     content: '\f004';
@@ -113,13 +113,31 @@ a {
   100% {
     opacity: 0; } }
 
+@keyframes load {
+  0% {
+    transform: translateX(-9999px);
+    z-index: 0; }
+  100% {
+    transform: translateX(0);
+    z-index: 1;
+    position: relative; } }
+
+.main-wrapper {
+  z-index: -1;
+  position: fixed;
+  animation: load 0ms 2s both;
+  background-color: #FFFFFF; }
+
 .page-loading {
   background: linear-gradient(#99E2D0, #FFFFFF);
-  height: 700px;
+  height: 100%;
+  width: 100%;
   text-align: center;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  z-index: 1;
+  position: absolute; }
   .page-loading .page-loading_section {
     width: 214px;
     height: 214px;
@@ -524,7 +542,7 @@ a {
     .restau__page-food .food-content:hover .food-content__text--price {
       transform: translateX(-250%); }
     .restau__page-food .food-content:hover .food-content__text--p {
-      width: 210px; }
+      width: 200px; }
 
 @media all and (min-width: 765px) {
   /*Pages*/

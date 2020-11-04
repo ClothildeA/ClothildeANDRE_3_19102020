@@ -50,13 +50,36 @@
     }
 }
 
+@keyframes load{
+    0% {
+        transform: translateX(-9999px);
+        z-index: 0;
+    }
+    100% {
+        transform: translateX(0);
+        z-index: 1;
+        position: relative;
+    }
+}
+
+.main-wrapper {
+    z-index: -1;
+    position: fixed;
+    animation: load 0ms 2s both;
+    background-color: $color-white;
+}
+
 .page-loading {
     background: linear-gradient($color-tertiary, $color-white);
-    height: 700px;
+    height: 100%;
+    width: 100%;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
+    position: absolute;
+
 
     .page-loading_section {
         width: 214px;
@@ -74,6 +97,7 @@
             color: $color-white;
             font-family: 'Shrikhand';
             font-size: 1.4rem;
+
         }
     }
 }
