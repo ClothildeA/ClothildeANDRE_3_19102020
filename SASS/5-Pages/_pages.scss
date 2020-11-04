@@ -56,8 +56,7 @@
         &-head {
             flex-basis: 100%;
             display: flex;
-            align-items: baseline;
-            justify-content: space-between;
+            align-items: center;
 
             &-title {
                 font-family: 'Shrikhand';
@@ -160,7 +159,7 @@
         &:hover {
 
             .anim-food{
-                transform: translate(390%, -10px);
+                transform: translate(395%, -10px);
 
                 &__icon {
                     transform: rotate(360deg);

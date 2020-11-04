@@ -158,32 +158,8 @@
             height: 60px;
         }
     }
-
-    .icon-favorite {
-        font-size: 1.5rem;
-        margin: 10px;
-        position: relative;
-        height: 23px;
-        width: 23px;
-
-        &::before {
-            content: '\f004';
-            font-family: 'Font Awesome 5 free';
-            position: absolute;
-            font-weight: 400;
-        }
-
-        &:hover::after {
-            content: '\f004';
-            font-family: 'Font Awesome 5 free';
-            position: absolute;
-            @include button-background;
-            background-clip: text;
-            -webkit-background-clip: text;       
-            -webkit-text-fill-color: transparent;
-            font-weight: 900;
-        }
-    }
+    
+    
 
     .img__palette {
         background-image: url(images/restaurants/la-palette-du-gout.jpg);

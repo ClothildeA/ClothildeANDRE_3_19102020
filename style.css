@@ -52,6 +52,38 @@ a {
 .restau__page--menu-button {
   width: 185px; }
 
+.icon-favorite {
+  font-size: 1.5rem;
+  margin: 20px;
+  position: relative;
+  height: 25px;
+  width: 25px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center; }
+  .icon-favorite::before {
+    content: '\f004';
+    font-family: 'Font Awesome 5 free';
+    position: absolute;
+    background: linear-gradient(#FF79DA, #9356DC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    transform: scale(0);
+    opacity: 0;
+    transition: all 500ms ease-in-out;
+    z-index: 2; }
+  .icon-favorite::after {
+    content: '\f004';
+    font-family: 'Font Awesome 5 free';
+    position: absolute;
+    font-weight: 400;
+    z-index: 1; }
+  .icon-favorite:hover::before {
+    transform: scale(1);
+    opacity: 1; }
+
 /*Animations*/
 /*Loading Spinner*/
 @keyframes spinner {
@@ -339,26 +371,6 @@ a {
       flex-basis: 100%;
       padding: 10px;
       height: 60px; }
-  .restau .icon-favorite {
-    font-size: 1.5rem;
-    margin: 10px;
-    position: relative;
-    height: 23px;
-    width: 23px; }
-    .restau .icon-favorite::before {
-      content: '\f004';
-      font-family: 'Font Awesome 5 free';
-      position: absolute;
-      font-weight: 400; }
-    .restau .icon-favorite:hover::after {
-      content: '\f004';
-      font-family: 'Font Awesome 5 free';
-      position: absolute;
-      background: linear-gradient(#FF79DA, #9356DC);
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-weight: 900; }
   .restau .img__palette {
     background-image: url(images/restaurants/la-palette-du-gout.jpg); }
   .restau .img__note {
@@ -430,8 +442,7 @@ a {
   .restau__page--menu-head {
     flex-basis: 100%;
     display: flex;
-    align-items: baseline;
-    justify-content: space-between; }
+    align-items: center; }
     .restau__page--menu-head-title {
       font-family: 'Shrikhand';
       font-size: 1.6rem; }
@@ -507,7 +518,7 @@ a {
         transition-timing-function: ease-in-out;
         transform: rotate(0); }
     .restau__page-food .food-content:hover .anim-food {
-      transform: translate(390%, -10px); }
+      transform: translate(395%, -10px); }
       .restau__page-food .food-content:hover .anim-food__icon {
         transform: rotate(360deg); }
     .restau__page-food .food-content:hover .food-content__text--price {
