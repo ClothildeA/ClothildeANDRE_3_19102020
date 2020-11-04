@@ -82,7 +82,7 @@ a {
     opacity: 0; } }
 
 .page-loading {
-  background-color: #99E2D0;
+  background: linear-gradient(#99E2D0, #FFFFFF);
   height: 700px;
   text-align: center;
   display: flex;
@@ -339,35 +339,26 @@ a {
       flex-basis: 100%;
       padding: 10px;
       height: 60px; }
-    .restau__item .icon-favorite {
-      font-size: 1.5rem;
-      margin: 10px;
-      position: relative;
-      height: 23px;
-      width: 23px; }
-      .restau__item .icon-favorite::before {
-        content: '\f004';
-        font-family: 'Font Awesome 5 free';
-        position: absolute;
-        font-weight: 400; }
-      .restau__item .icon-favorite:hover::after {
-        content: '\f004';
-        font-family: 'Font Awesome 5 free';
-        position: absolute;
-        background: linear-gradient(#FF79DA, #9356DC);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: 900;
-        transition: opacity 500ms; }
-    .restau__item--icon-solid {
-      opacity: 0;
-      z-index: -1;
-      font-size: 1.5rem;
-      margin: 10px; }
-      .restau__item--icon-solid:hover {
-        opacity: 1;
-        z-index: 1;
-        background: linear-gradient(#FF79DA, #9356DC); }
+  .restau .icon-favorite {
+    font-size: 1.5rem;
+    margin: 10px;
+    position: relative;
+    height: 23px;
+    width: 23px; }
+    .restau .icon-favorite::before {
+      content: '\f004';
+      font-family: 'Font Awesome 5 free';
+      position: absolute;
+      font-weight: 400; }
+    .restau .icon-favorite:hover::after {
+      content: '\f004';
+      font-family: 'Font Awesome 5 free';
+      position: absolute;
+      background: linear-gradient(#FF79DA, #9356DC);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 900; }
   .restau .img__palette {
     background-image: url(images/restaurants/la-palette-du-gout.jpg); }
   .restau .img__note {
@@ -467,22 +458,62 @@ a {
     background-color: white;
     border-radius: 15px;
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     margin: 15px 0;
     padding: 10px;
-    box-shadow: 0px 5px 10px 2px #e2e2e2; }
+    box-shadow: 0px 5px 10px 2px #e2e2e2;
+    position: relative;
+    overflow: hidden; }
     .restau__page-food .food-content__text--h {
       width: 100%;
       margin: 0;
       padding: 3px;
       font-size: 1.1rem; }
     .restau__page-food .food-content__text--p {
-      width: 85%;
+      width: 265px;
       margin: 0;
       padding: 3px;
-      font-size: .9rem; }
+      font-size: .9rem;
+      transition-property: all;
+      transition-duration: 500ms;
+      transition-timing-function: ease-in-out;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden; }
     .restau__page-food .food-content__text--price {
-      margin: 0; }
+      margin: 0;
+      transform: translateX(0);
+      transition-property: all;
+      transition-duration: 500ms;
+      transition-timing-function: ease-in-out; }
+    .restau__page-food .food-content .anim-food {
+      width: 20%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition-property: all;
+      transition-duration: 500ms;
+      transition-timing-function: ease-in-out;
+      background-color: #99E2D0;
+      position: absolute;
+      transform: translate(500%, -10px); }
+      .restau__page-food .food-content .anim-food__icon {
+        color: #FFFFFF;
+        font-size: 1.5rem;
+        transition-property: all;
+        transition-duration: 500ms;
+        transition-timing-function: ease-in-out;
+        transform: rotate(0); }
+    .restau__page-food .food-content:hover .anim-food {
+      transform: translate(390%, -10px); }
+      .restau__page-food .food-content:hover .anim-food__icon {
+        transform: rotate(360deg); }
+    .restau__page-food .food-content:hover .food-content__text--price {
+      transform: translateX(-250%); }
+    .restau__page-food .food-content:hover .food-content__text--p {
+      width: 210px; }
 
 @media all and (min-width: 765px) {
   /*Pages*/
@@ -507,7 +538,9 @@ a {
           width: 100%; }
         .restau__page-food .food-wrapper .food-content__text--price {
           width: 100%;
-          text-align: end; } }
+          text-align: end; }
+        .restau__page-food .food-wrapper .food-content:hover .food-content__text--price {
+          transform: translateX(-25%); } }
 
 @media all and (min-width: 1025px) {
   .restau__page--menu-head {

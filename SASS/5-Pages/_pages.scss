@@ -98,10 +98,13 @@
         background-color: white;
         border-radius: 15px;
         display: flex;
+        justify-content: space-between;
         flex-wrap: wrap;
         margin: 15px 0;
         padding: 10px;
         @include item-shadow;
+        position: relative;
+        overflow: hidden;
 
         &__text--h {
             width: 100%;
@@ -111,14 +114,66 @@
         }
 
         &__text--p {
-            width: 85%;
+            width: 265px;
             margin: 0;
             padding: 3px;
             font-size: .9rem;
+            transition-property: all;
+            transition-duration: 500ms;
+            transition-timing-function: ease-in-out;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
         }
 
         &__text--price {
             margin: 0;
+            transform: translateX(0);
+            transition-property: all;
+            transition-duration: 500ms;
+            transition-timing-function: ease-in-out; 
+        }
+
+        .anim-food {
+            width: 20%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition-property: all;
+            transition-duration: 500ms;
+            transition-timing-function: ease-in-out;
+            background-color: $color-tertiary;
+            position: absolute;
+            transform: translate(500%, -10px);
+
+            &__icon {
+                color: $color-white;
+                font-size: 1.5rem;
+                transition-property: all;
+                transition-duration: 500ms;
+                transition-timing-function: ease-in-out;
+                transform: rotate(0);
+            }
+        }
+
+        &:hover {
+
+            .anim-food{
+                transform: translate(390%, -10px);
+
+                &__icon {
+                    transform: rotate(360deg);
+                }
+            }
+
+            .food-content__text--price { 
+                transform: translateX(-250%);
+            }
+
+            .food-content__text--p {
+                width: 210px;
+            }
         }
     }
 }
@@ -159,6 +214,12 @@
                 &__text--price {
                     width: 100%;
                     text-align: end;
+                }
+
+                &:hover {
+                    .food-content__text--price { 
+                        transform: translateX(-25%);
+                    }
                 }
             }
         }

@@ -6,11 +6,11 @@
 
 @keyframes spinner {
     0% {
-        opacity: 1
+        opacity: 1;
     }
 
     100% {
-        opacity: 0
+        opacity: 0;
     }
 }
 
@@ -18,11 +18,11 @@
 
     /* sur Firefox */
     0% {
-        opacity: 1
+        opacity: 1;
     }
 
     100% {
-        opacity: 0
+        opacity: 0;
     }
 }
 
@@ -30,11 +30,11 @@
 
     /* sur Safari et Chrome */
     0% {
-        opacity: 1
+        opacity: 1;
     }
 
     100% {
-        opacity: 0
+        opacity: 0;
     }
 }
 
@@ -42,16 +42,16 @@
 
     /* sur Opera */
     0% {
-        opacity: 1
+        opacity: 1;
     }
 
     100% {
-        opacity: 0
+        opacity: 0;
     }
 }
 
 .page-loading {
-    background-color: $color-tertiary;
+    background: linear-gradient($color-tertiary, $color-white);
     height: 700px;
     text-align: center;
     display: flex;
