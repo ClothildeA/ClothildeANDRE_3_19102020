@@ -62,11 +62,12 @@
     }
 }
 
-.main-wrapper {
+.main-wrapper__load {
     z-index: -1;
     position: fixed;
     animation: load 0ms 2s both;
     background-color: $color-white;
+    width: 100%;
 }
 
 .page-loading {
@@ -202,12 +203,12 @@
     /* sur Firefox */
     from {
         opacity: 0;
-        transform: translateY(0);
+        transform: translateY(20px);
     }
 
     to {
         opacity: 1;
-        transform: translateY(-20px);
+        transform: translateY(0);
     }
 }
 
@@ -216,12 +217,12 @@
     /* sur Safari et Chrome */
     from {
         opacity: 0;
-        transform: translateY(0);
+        transform: translateY(20px);
     }
 
     to {
         opacity: 1;
-        transform: translateY(-20px);
+        transform: translateY(0);
     }
 }
 
@@ -230,12 +231,12 @@
     /* sur Opera */
     from {
         opacity: 0;
-        transform: translateY(0);
+        transform: translateY(20px);
     }
 
     to {
         opacity: 1;
-        transform: translateY(-20px);
+        transform: translateY(0);
     }
 }
 

@@ -122,11 +122,12 @@ a {
     z-index: 1;
     position: relative; } }
 
-.main-wrapper {
+.main-wrapper__load {
   z-index: -1;
   position: fixed;
   animation: load 0ms 2s both;
-  background-color: #FFFFFF; }
+  background-color: #FFFFFF;
+  width: 100%; }
 
 .page-loading {
   background: linear-gradient(#99E2D0, #FFFFFF);
@@ -221,28 +222,28 @@ a {
   /* sur Firefox */
   from {
     opacity: 0;
-    transform: translateY(0); }
+    transform: translateY(20px); }
   to {
     opacity: 1;
-    transform: translateY(-20px); } }
+    transform: translateY(0); } }
 
 @-webkit-keyframes slide-top {
   /* sur Safari et Chrome */
   from {
     opacity: 0;
-    transform: translateY(0); }
+    transform: translateY(20px); }
   to {
     opacity: 1;
-    transform: translateY(-20px); } }
+    transform: translateY(0); } }
 
 @-o-keyframes slide-top {
   /* sur Opera */
   from {
     opacity: 0;
-    transform: translateY(0); }
+    transform: translateY(20px); }
   to {
     opacity: 1;
-    transform: translateY(-20px); } }
+    transform: translateY(0); } }
 
 .item-2 {
   animation-delay: 150ms; }
