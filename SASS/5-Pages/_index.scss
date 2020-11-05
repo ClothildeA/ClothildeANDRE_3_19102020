@@ -47,6 +47,7 @@
     &-content {
         margin: 0 20px 35px;
         font-size: 1rem;
+        font-weight: 300;
     }
 }
 
@@ -94,7 +95,7 @@
 
         &--text {
             margin: 20px;
-            font-weight: 900;
+            font-weight: 500;
             font-size: 1rem;
         }
     }
@@ -157,6 +158,10 @@
             flex-basis: 100%;
             padding: 10px;
             height: 60px;
+
+            .restau__item--title {
+                font-weight: 600;
+            }
         }
     }
     
