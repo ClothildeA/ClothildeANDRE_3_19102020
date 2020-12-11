@@ -2,6 +2,71 @@
 
 
 
+/*Load index*/
+
+@keyframes load{
+    0% {
+        transform: translateX(-9999px);
+        z-index: 0;
+        position: fixed;
+    }
+    100% {
+        transform: translateX(0);
+        z-index: 1;
+        position: relative;
+    }
+}
+
+@-moz-keyframes load{
+    0% {
+        transform: translateX(-9999px);
+        z-index: 0;
+        position: fixed;
+    }
+    100% {
+        transform: translateX(0);
+        z-index: 1;
+        position: relative;
+    }
+}
+
+@-webkit-keyframes load{
+    0% {
+        transform: translateX(-9999px);
+        z-index: 0;
+        position: fixed;
+    }
+    100% {
+        transform: translateX(0);
+        z-index: 1;
+        position: relative;
+    }
+}
+
+@-o-keyframes load{
+    0% {
+        transform: translateX(-9999px);
+        z-index: 0;
+        position: fixed;
+    }
+    100% {
+        transform: translateX(0);
+        z-index: 1;
+        position: relative;
+    }
+}
+
+
+.main-wrapper__load {
+    z-index: -1;
+    position: -webkit-sticky;
+    position: sticky;
+    animation: load 0ms 2s both;
+    background-color: $color-white;
+    width: 100%;
+    overflow: hidden;
+}
+
 /*Loading Spinner*/
 
 @keyframes spinner {
@@ -48,67 +113,6 @@
     100% {
         opacity: 0;
     }
-}
-
-/*Load index*/
-
-@keyframes load{
-    0% {
-        transform: translateX(-9999px);
-        z-index: 0;
-    }
-    100% {
-        transform: translateX(0);
-        z-index: 1;
-        position: relative;
-    }
-}
-
-@-moz-keyframes load{
-    0% {
-        transform: translateX(-9999px);
-        z-index: 0;
-    }
-    100% {
-        transform: translateX(0);
-        z-index: 1;
-        position: relative;
-    }
-}
-
-@-webkit-keyframes load{
-    0% {
-        transform: translateX(-9999px);
-        z-index: 0;
-    }
-    100% {
-        transform: translateX(0);
-        z-index: 1;
-        position: relative;
-    }
-}
-
-@-o-keyframes load{
-    0% {
-        transform: translateX(-9999px);
-        z-index: 0;
-    }
-    100% {
-        transform: translateX(0);
-        z-index: 1;
-        position: relative;
-    }
-}
-
-
-.main-wrapper__load {
-    z-index: -1;
-    position: -webkit-sticky;
-    position: sticky;
-    animation: load 0ms 2s both;
-    background-color: $color-white;
-    width: 100%;
-    overflow: hidden;
 }
 
 .page-loading {
@@ -223,9 +227,6 @@
 /*Chargement Menu*/
 .food-content {
     animation: slide-top 1800ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    -webkit-animation: slide-top 1800ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    -moz-animation: slide-top 1800ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    -o-animation: slide-top 1800ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 @keyframes slide-top {

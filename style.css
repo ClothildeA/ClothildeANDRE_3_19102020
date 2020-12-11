@@ -32,7 +32,7 @@ a {
   text-decoration: none;
   color: #000000; }
 
-/*Button + animation*/
+/*Button*/
 .home__text-button,
 .restau__page--menu-button {
   color: #FFFFFF;
@@ -53,6 +53,7 @@ a {
 .restau__page--menu-button {
   width: 185px; }
 
+/*icon-favorite heart*/
 .icon-favorite {
   font-size: 1.5rem;
   margin: 20px;
@@ -89,6 +90,56 @@ a {
     width: 26px; }
 
 /*Animations*/
+/*Load index*/
+@keyframes load {
+  0% {
+    transform: translateX(-9999px);
+    z-index: 0;
+    position: fixed; }
+  100% {
+    transform: translateX(0);
+    z-index: 1;
+    position: relative; } }
+
+@-moz-keyframes load {
+  0% {
+    transform: translateX(-9999px);
+    z-index: 0;
+    position: fixed; }
+  100% {
+    transform: translateX(0);
+    z-index: 1;
+    position: relative; } }
+
+@-webkit-keyframes load {
+  0% {
+    transform: translateX(-9999px);
+    z-index: 0;
+    position: fixed; }
+  100% {
+    transform: translateX(0);
+    z-index: 1;
+    position: relative; } }
+
+@-o-keyframes load {
+  0% {
+    transform: translateX(-9999px);
+    z-index: 0;
+    position: fixed; }
+  100% {
+    transform: translateX(0);
+    z-index: 1;
+    position: relative; } }
+
+.main-wrapper__load {
+  z-index: -1;
+  position: -webkit-sticky;
+  position: sticky;
+  animation: load 0ms 2s both;
+  background-color: #FFFFFF;
+  width: 100%;
+  overflow: hidden; }
+
 /*Loading Spinner*/
 @keyframes spinner {
   0% {
@@ -116,52 +167,6 @@ a {
     opacity: 1; }
   100% {
     opacity: 0; } }
-
-/*Load index*/
-@keyframes load {
-  0% {
-    transform: translateX(-9999px);
-    z-index: 0; }
-  100% {
-    transform: translateX(0);
-    z-index: 1;
-    position: relative; } }
-
-@-moz-keyframes load {
-  0% {
-    transform: translateX(-9999px);
-    z-index: 0; }
-  100% {
-    transform: translateX(0);
-    z-index: 1;
-    position: relative; } }
-
-@-webkit-keyframes load {
-  0% {
-    transform: translateX(-9999px);
-    z-index: 0; }
-  100% {
-    transform: translateX(0);
-    z-index: 1;
-    position: relative; } }
-
-@-o-keyframes load {
-  0% {
-    transform: translateX(-9999px);
-    z-index: 0; }
-  100% {
-    transform: translateX(0);
-    z-index: 1;
-    position: relative; } }
-
-.main-wrapper__load {
-  z-index: -1;
-  position: -webkit-sticky;
-  position: sticky;
-  animation: load 0ms 2s both;
-  background-color: #FFFFFF;
-  width: 100%;
-  overflow: hidden; }
 
 .page-loading {
   background: linear-gradient(#99E2D0, #FFFFFF);
@@ -240,10 +245,7 @@ a {
 
 /*Chargement Menu*/
 .food-content {
-  animation: slide-top 1800ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  -webkit-animation: slide-top 1800ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  -moz-animation: slide-top 1800ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  -o-animation: slide-top 1800ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+  animation: slide-top 1800ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
 
 @keyframes slide-top {
   from {
