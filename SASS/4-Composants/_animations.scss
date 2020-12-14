@@ -6,12 +6,12 @@
 
 @keyframes load{
     0% {
-        transform: translateX(-9999px);
+        opacity: 0;
         z-index: 0;
         position: fixed;
     }
     100% {
-        transform: translateX(0);
+        opacity: 1;
         z-index: 1;
         position: relative;
     }
@@ -19,12 +19,12 @@
 
 @-moz-keyframes load{
     0% {
-        transform: translateX(-9999px);
+        opacity: 0;
         z-index: 0;
         position: fixed;
     }
     100% {
-        transform: translateX(0);
+        opacity: 1;
         z-index: 1;
         position: relative;
     }
@@ -32,12 +32,12 @@
 
 @-webkit-keyframes load{
     0% {
-        transform: translateX(-9999px);
+        opacity: 0;
         z-index: 0;
         position: fixed;
     }
     100% {
-        transform: translateX(0);
+        opacity: 1;
         z-index: 1;
         position: relative;
     }
@@ -45,12 +45,12 @@
 
 @-o-keyframes load{
     0% {
-        transform: translateX(-9999px);
+        opacity: 0;
         z-index: 0;
         position: fixed;
     }
     100% {
-        transform: translateX(0);
+        opacity: 1;
         z-index: 1;
         position: relative;
     }
@@ -61,7 +61,7 @@
     z-index: -1;
     position: -webkit-sticky;
     position: sticky;
-    animation: load 0ms 2s both;
+    animation: load 800ms 2s both;
     background-color: $color-white;
     width: 100%;
     overflow: hidden;
