@@ -89,7 +89,7 @@ a {
     opacity: 1;
     width: 26px; }
 
-/*Animations*/
+/*Animations keyframes*/
 /*Load index*/
 @keyframes load {
   0% {
